@@ -1,0 +1,6 @@
+ID_;REV_;FIRST_;LAST_;EMAIL_;PWD_
+admin;1;Administrator;admin;798881262@qq.com;test
+departmentLeader;1;department;Leader;798881262@qq.com;departmentLeader
+master;1;master;master;798881262@qq.com;master
+projectLeader;1;project;Leader;798881262@qq.com;projectLeader
+user;1;User;user;798881262@qq.com;user

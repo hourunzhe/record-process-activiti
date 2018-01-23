@@ -1,0 +1,7 @@
+ID_;REV_;NAME_;TYPE_
+ROLE_ADMIN;1;Superusers;security-role
+departmentLeader;1;departmentLeader;assignment
+master;1;master;assignment
+projectLeader;1;projectLeader;assignment
+user;1;user;assignment
+

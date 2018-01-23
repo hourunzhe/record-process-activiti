@@ -1,0 +1,6 @@
+USER_ID_;GROUP_ID_
+admin;ROLE_ADMIN
+departmentLeader;departmentLeader
+master;master
+projectLeader;projectLeader
+user;user

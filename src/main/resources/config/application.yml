@@ -1,0 +1,20 @@
+server:
+  port: 8081
+liquibase:
+  change-log: classpath:config/liquibase/master.xml
+spring:
+  activiti:
+    mail-server-host: smtp.qq.com
+    mail-server-port: 465
+    mail-server-default-from: 798881262@qq.com
+    mail-server-user-name: 798881262@qq.com
+    mail-server-password: dzpgxnwgpmxdbchd
+    mail-server-use-ssl: true
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:mem:activiti;DB_CLOSE_DELAY=1000
+    username: sa
+    driver-class-name: org.h2.Driver

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/20170602061151_added_entity_Record.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/activiti.h2.create.identity.sql" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170705055511_inital_data.xml" relativeToChangelogFile="false"/>
+
+</databaseChangeLog>
