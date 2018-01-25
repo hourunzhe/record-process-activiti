@@ -10,6 +10,8 @@
     <sequenceFlow id="sid-BF1FFDB8-DAD8-4C15-840E-02091F1F860C" sourceRef="startEvent1" targetRef="sid-FA580AC6-09A4-4F6D-897C-39805E9F280F"></sequenceFlow>
     <userTask id="sid-B9B39F4F-A497-4561-BF19-0E494339EED9" name="主办初审" activiti:candidateGroups="master">
       <extensionElements>
+        <activiti:formProperty id="room" />
+        <activiti:formProperty id="duration" type="long"/>
         <modeler:group-info-name-master xmlns:modeler="http://activiti.com/modeler"><![CDATA[master]]></modeler:group-info-name-master>
         <modeler:activiti-idm-candidate-group xmlns:modeler="http://activiti.com/modeler"><![CDATA[true]]></modeler:activiti-idm-candidate-group>
         <modeler:initiator-can-complete xmlns:modeler="http://activiti.com/modeler"><![CDATA[false]]></modeler:initiator-can-complete>
