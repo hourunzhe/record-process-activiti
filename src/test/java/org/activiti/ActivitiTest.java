@@ -8,12 +8,8 @@ import org.activiti.engine.task.Task;
 import org.junit.Test;
 
 import java.util.List;
+public class ActivitiTest {
 
-public class ParallelGatewayTest {
-
-    /**
-     * 获取默认流程引擎实例，会自动读取activiti.cfg.xml文件
-     */
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
 
     /**
@@ -23,12 +19,9 @@ public class ParallelGatewayTest {
     public void deploy() {
         Deployment deployment = processEngine.getRepositoryService() // 获取部署相关Service
                 .createDeployment() // 创建部署
-                .addClasspathResource("diagrams/gatewayParallel.bpmn") // 加载资源文件
-                .addClasspathResource("diagrams/gatewayParallel.png") // 加载资源文件
-                .name("学生请假流程4") // 流程名称
+                .addClasspathResource("processes/Record_Process.bpmn20.xml") // 加载资源文件
+                .name("流程部署测试") // 流程名称
                 .deploy(); // 部署
-        System.out.println("流程部署ID:" + deployment.getId());
-        System.out.println("流程部署Name:" + deployment.getName());
     }
 
     /**
@@ -37,7 +30,7 @@ public class ParallelGatewayTest {
     @Test
     public void start() {
         ProcessInstance pi = processEngine.getRuntimeService() // 运行时Service
-                .startProcessInstanceByKey("parallelGateway"); // 流程定义表的KEY字段值
+                .startProcessInstanceByKey("recordProcess"); // 流程定义表的KEY字段值
         System.out.println("流程实例ID:" + pi.getId());
         System.out.println("流程定义ID:" + pi.getProcessDefinitionId());
     }
