@@ -7,7 +7,10 @@ import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 public class ActivitiTest {
 
     private ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
@@ -20,6 +23,7 @@ public class ActivitiTest {
         Deployment deployment = processEngine.getRepositoryService() // 获取部署相关Service
                 .createDeployment() // 创建部署
                 .addClasspathResource("processes/Record_Process.bpmn20.xml") // 加载资源文件
+                .addClasspathResource("processes/start.form")
                 .name("流程部署测试") // 流程名称
                 .deploy(); // 部署
     }
@@ -64,5 +68,26 @@ public class ActivitiTest {
                 .complete("65009");
     }
 
+
+    @Test
+    public void formTest() {
+        Map<String, String> formProperties = new HashMap<String, String>();
+        formProperties.put("applyUserId","");
+        formProperties.put("leaveType","");
+        formProperties.put("startTime","");
+        formProperties.put("endTime","");
+        formProperties.put("reason","");
+        //启动流程-何静媛-2015年5月24日--processDefinitionId,
+        ProcessInstance processInstance = processEngine.getFormService().submitStartFormData("recordProcess:7:32505",
+                formProperties);
+
+        System.out.println(processInstance.getId());
+    }
+
+    @Test
+    public void formTest2() {
+        Object renderedTaskForm = processEngine.getFormService().getRenderedTaskForm("37515");
+        System.out.println(renderedTaskForm);
+    }
 
 }

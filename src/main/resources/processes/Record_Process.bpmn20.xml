@@ -2,7 +2,7 @@
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
   <process id="recordProcess" name="Record Process" isExecutable="true">
     <startEvent id="startEvent1"></startEvent>
-    <userTask id="sid-FA580AC6-09A4-4F6D-897C-39805E9F280F" name="电厂主管填写注册/备案信息" activiti:assignee="$INITIATOR">
+    <userTask id="sid-FA580AC6-09A4-4F6D-897C-39805E9F280F" name="电厂主管填写注册/备案信息" activiti:assignee="$INITIATOR" activiti:formKey="processes/start.form">
       <extensionElements>
         <modeler:initiator-can-complete xmlns:modeler="http://activiti.com/modeler"><![CDATA[true]]></modeler:initiator-can-complete>
       </extensionElements>
